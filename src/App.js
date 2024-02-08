@@ -41,6 +41,7 @@ export default function Search() {
   if (loaded) {
     return (
       <div>
+        <h1>Weather App</h1>
         {form}
         <ul>
           <li>Temperature: {Math.round(weather.temperature)}°C</li>
@@ -51,6 +52,7 @@ export default function Search() {
             <img src={weather.icon} alt={weather.description} />
           </li>
         </ul>
+        
       </div>
     );
   } else {
