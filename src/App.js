@@ -38,11 +38,13 @@ export default function Search() {
     </form>
   );
 
+
   if (loaded) {
     return (
       <div>
         <h1>Weather App</h1>
         {form}
+
         <ul>
           <li>Temperature: {Math.round(weather.temperature)}°C</li>
           <li>Description: {weather.description}</li>
@@ -52,7 +54,10 @@ export default function Search() {
             <img src={weather.icon} alt={weather.description} />
           </li>
         </ul>
-        
+        <footer>
+          Open-source coded by{" "}
+          <a href="https://github.com/ThapeloM01/weather-react">Mokoena Thapelo</a>
+        </footer>
       </div>
     );
   } else {
