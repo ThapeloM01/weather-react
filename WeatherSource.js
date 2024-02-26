@@ -1,6 +1,6 @@
 import React from "react";
 import currentDate from "./currentDate";
-
+import IconWeather from "./IconWeather"
 
 export default function WeatherSource(props) {
     return (
@@ -14,7 +14,11 @@ export default function WeatherSource(props) {
         </ul>
         <div className="row mt-3">
           <div className="col-6">
-            <div className="clearfix"></div>
+            <div className="clearfix">
+                <div className="float-let"></div>
+            <IconWeather code={props.data.icon}
+            alt={props.data.description}
+            />  
             <img src={props.data.iconUrl} alt={props.data.description}></img>
             <div className="float-left">
               <span className="tempValue">
@@ -22,6 +26,7 @@ export default function WeatherSource(props) {
               </span>
               <span className="tempUnit"></span>
             </div>
+          </div>
           </div>
         </div>
         <div className="col-6">
