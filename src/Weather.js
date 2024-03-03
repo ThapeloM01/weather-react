@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherSource from "./WeatherSource";
+import DailyForecast from "./DailyForecast";
 import "./Weather.css";
 
-export default function weather(props) {
+export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [weatherData, setWeatherData] = useState({ ready: false });
   function tempResponse(response) {
     setWeatherData({
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
@@ -55,6 +57,7 @@ export default function weather(props) {
           </div>
         </form>
         <WeatherSource data={weatherData} />
+        <DailyForecast coordinates={weatherData.coordinates}/>
       </div>
     );
   } else {

@@ -1,0 +1,10 @@
+.dailyForecast{
+    text-align: center;
+  margin: 40px 0;
+  border-bottom: 1px solid #f9f7fe;
+  padding-bottom: 50px;
+}
+.Forecast-temperature-min{
+    opacity: 0.6;
+    margin-left: 5px;
+}

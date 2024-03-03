@@ -1,9 +1,21 @@
 .App {
     max-width: 600px;
-    margin:30px auto;
+    margin:60px auto;
+    font-style: normal;
+    font-weight: 700;
 }
 
 .App footer{
-    font-size: 11px;
-    margin: 10px 0;
+     font-size: 14px;
+  margin-top: 40px;
+  line-height: 18px;
+  text-align: center;
+  color: rgba(39, 33, 66, 0.4);
+}
+.App footer a {
+     color: #885df1;
+}
+
+body{
+    background: #f9f7fe;
 }
